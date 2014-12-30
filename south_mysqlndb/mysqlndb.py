@@ -1,8 +1,16 @@
 from __future__ import print_function
-from south.db.mysql import DatabaseOperations as BaseDatabaseOperations
-from south.logger import get_logger
-from south.utils.py3 import text_type
-from django.db.utils import DatabaseError
+try:
+    from south.db.mysql import DatabaseOperations as BaseDatabaseOperations
+    from south.logger import get_logger
+    from south.utils.py3 import text_type
+except ImportError:
+    print('can not load south')
+    raise
+try:
+    from django.db.utils import DatabaseError
+except ImportError:
+    print('can not load django')
+    raise
 
 MYSQLNDB_SPECIFIC_ERROR = ['Converted FIXED field to DYNAMIC to enable on-line ADD COLUMN']
 

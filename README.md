@@ -1,7 +1,7 @@
 south-mysqlndb
 ==============
 
-south database adapter for mysqlndb
+South database adapter for mysqlndb
 
 What does this package do ?
 -------------------------
@@ -30,7 +30,7 @@ Currently, I only test the package in below enviroment:
 
 Installation
 ------------
-use pip to install:
+Use pip to install:
 
 ```
 pip install south_mysqlndb
@@ -38,7 +38,7 @@ pip install south_mysqlndb
 
 Usage
 -----
-set the `SOUTH_DATABASE_ADAPTERS` in django settings
+Set the `SOUTH_DATABASE_ADAPTERS` in django settings
 
 ```python
 SOUTH_DATABASE_ADAPTERS = {
